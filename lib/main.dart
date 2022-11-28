@@ -10,9 +10,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Welcome to Flutter',
-      home: RandomWords(),
+    return MaterialApp(
+      title: 'Startup Name Generator',
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.green,
+          foregroundColor: Colors.white,
+        ),
+        dividerTheme: const DividerThemeData(
+          color: Colors.green,
+          space: 10,
+          thickness: 10,
+          indent: 0,
+          endIndent: 0
+        )
+      ),
+      home: const RandomWords(),
     );
   }
 }
